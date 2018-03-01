@@ -1,4 +1,4 @@
-//zbiór słów
+//set of words
 var slowa = [
     'javascript',
     'monter',
@@ -6,35 +6,35 @@ var slowa = [
     'lampart',
     'dzik',
     'piorun',
-    'jastrząb',
+    'jastrzab',
     'niedzwiadek'
 ];
-//wybór losowego słowa
+// choose random word
 var slowo = slowa[Math.floor(Math.random() * slowa.length)]; 
 
-//tablica z odpowiedziami
+//table with answers
 var odpowiedzi = []; 
 for (var i = 0; i < slowo.length; i++) { 
     odpowiedzi[i] = '_';
 }
 
-//przechowuje DŁUGOŚC słowa do zgadniecia
+//LENGTH words to guess
 var pozostaleLitery = slowo.length; 
 
-// kod gry
+// game code
 while (pozostaleLitery > 0) {  
-    //bieżacy winik
+    // current result
     alert(odpowiedzi.join(' ')) 
     
-    //pobieranie danych od uzytkownika
-    var strzal = prompt('Podaj literę lub kliknij "anuluj" aby zakończyć grę'); 
+    // downloading data from user
+    var strzal = prompt('Podaj litere lub kliknij "anuluj" aby zakonczyc gre'); 
     
     if (strzal === null) {
         break;
     } else if (strzal.length !== 1) {
-        alert('Proszę podaj tylko jedną literę');
+        alert('Prosze podaj tylko jedna litere');
     } else {                                     
-        //jesli strzal byl trafny zaktualizuj tablice odpowiedzi
+        // update the answer table
         for (var j = 0; j < slowo.length; i++) {
             if (slowo[j] === strzal) {
                 odpowiedzi[j] = strzal;
@@ -44,4 +44,4 @@ while (pozostaleLitery > 0) {
     }        
 }
 alert(odpowiedzi.join(' '));
-alert('Dobra robota! Szukane słowo to ' + slowo);
+alert('Dobra robota! Szukane slowo to ' + slowo);
