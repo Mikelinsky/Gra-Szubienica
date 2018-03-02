@@ -35,7 +35,7 @@ while (pozostaleLitery > 0) {
         alert('Prosze podaj tylko jedna litere');
     } else {                                     
         // update the answer table
-        for (var j = 0; j < slowo.length; i++) {
+        for (var j = 0; j < slowo.length; j++) {
             if (slowo[j] === strzal) {
                 odpowiedzi[j] = strzal;
                 pozostaleLitery--; 
